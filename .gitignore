@@ -4,3 +4,4 @@ coverage
 .env.test
 *.sqlite
 yarn.lock
+__tests__/coverage
