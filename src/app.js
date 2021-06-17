@@ -1,23 +1,26 @@
-import express from 'express'
-import morgan from 'morgan'
-import routes from './routes'
+require("dotenv").config({
+  path: process.env.NODE_ENV === "test" ? ".env.test" : ".env"
+});
+
+const express = require("express");
+const morgan = require('morgan');
 
 class AppController {
   constructor() {
-    this.express = express()
+    this.express = express();
 
-    this.middlewares()
-    this.routes()
+    this.middlewares();
+    this.routes();
   }
 
   middlewares() {
-    this.express.use(express.json())
-    this.express.use(morgan('dev'))
+    this.express.use(express.json());
+    this.express.use(morgan('dev'));
   }
 
   routes() {
-    this.express.use(routes)
+    this.express.use(require("./routes"));
   }
 }
 
-export default new AppController().express
+module.exports = new AppController().express;

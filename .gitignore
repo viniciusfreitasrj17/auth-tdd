@@ -1,2 +1,7 @@
 node_modules
 coverage
+.env
+.env.test
+*.sqlite
+yarn.lock
+__tests__/coverage

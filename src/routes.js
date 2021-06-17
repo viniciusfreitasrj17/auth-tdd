@@ -1,6 +1,15 @@
-import { Router } from 'express'
-const routes = Router()
+const { Router } = require('express');
+const routes = Router();
 
-// Routes
+const authMiddleWare = require('./app/middlewares/auth')
 
-export default routes;
+const SessionController = require('./app/controllers/SessionController')
+
+routes.post('/sessions', SessionController.store)
+
+// Private
+routes.get('/dashboard', authMiddleWare, (req, res) => {
+  return res.status(200).send()
+})
+
+module.exports = routes;
