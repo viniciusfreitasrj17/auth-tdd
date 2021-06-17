@@ -37,7 +37,7 @@ describe('Authentication', () => {
       .post('/sessions')
       .send({
         email: user.email,
-        password: 'DAAAAAAAAAAAAAAAAA'
+        password: 'DAAAAAAAAAAA'
       })
     
     expect(response.status).toBe(401)
