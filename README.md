@@ -10,11 +10,6 @@ yarn
 
 Configure .env
 
-Create Database
-```
-yarn db:create
-```
-
 Run Migrations
 ```
 yarn db:migrate
@@ -23,11 +18,6 @@ yarn db:migrate
 Run App
 ```
 yarn dev
-```
-
-Reset DB
-```
-yarn db:migrate:reset
 ```
 
 ## Run tests

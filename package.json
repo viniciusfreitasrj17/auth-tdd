@@ -6,9 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js --ignore __tests__",
-    "db:create": "sequelize db:create",
     "db:migrate": "sequelize db:migrate",
-    "db:migrate:reset": "sequelize db:drop && sequelize db:create && sequelize db:migrate",
     "pretest": "NODE_ENV=test sequelize db:migrate",
     "test": "NODE_ENV=test jest",
     "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
