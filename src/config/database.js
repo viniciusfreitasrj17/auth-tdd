@@ -15,6 +15,7 @@ module.exports = {
     password: process.env.DB_PASSWORD,
     database: process.env.DATABASE,
     dialect: process.env.DIALECT || "postgres",
+    logging: false,
     operatorsAliases: process.env.OPERATORS_ALIASES,
     port: process.env.DB_PORT,
     define
@@ -25,6 +26,7 @@ module.exports = {
     password: process.env.DB_PASSWORD,
     database: process.env.DATABASE,
     dialect: process.env.DIALECT || "sqlite",
+    logging: false,
     storage: process.env.STORAGE,
     operatorsAliases: process.env.OPERATORS_ALIASES,
     port: process.env.DB_PORT,
@@ -36,6 +38,7 @@ module.exports = {
     password: process.env.DB_PASSWORD,
     database: process.env.DATABASE,
     dialect: process.env.DIALECT || "postgres",
+    logging: false,
     operatorsAliases: process.env.OPERATORS_ALIASES,
     port: process.env.DB_PORT,
     define
