@@ -66,7 +66,7 @@ describe('Authentication', () => {
     expect(response.status).toBe(200)
   })
 
-  it('should not be able to access private routes when not authenticated', async () => {
+  it('should not be able to access private routes without jwt token', async () => {
     const response = await request(app)
       .get('/dashboard')
     
